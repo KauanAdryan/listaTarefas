@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas Moderna</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-tasks"></i> Minha Lista de Tarefas</h1>
+      <p>Organize seu dia de forma simples e eficiente</p>
+    </header>
+
+    <div id="lista" class="tarefas-container"></div>
+
+    <button id="abrirModal" class="btn-add">
+      <i class="fas fa-plus"></i> Adicionar Tarefa
+    </button>
+  </div>
+
+  <!-- Modal de Adição/Edição -->
+  <div id="modal" class="modal oculto">
+    <div class="modal-conteudo animate-in">
+      <span class="fechar" id="fecharModal">&times;</span>
+      <h2 id="modalTitulo"><i class="fas fa-tasks"></i> <span>Nova Tarefa</span></h2>
+      <div class="input-group">
+        <i class="fas fa-heading"></i>
+        <input type="text" id="titulo" placeholder="Título da tarefa">
+      </div>
+      <div class="input-group">
+        <i class="fas fa-align-left"></i>
+        <textarea id="descricao" placeholder="Descrição breve"></textarea>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-calendar-day"></i>
+        <input type="date" id="prazo">
+      </div>
+      <button id="confirmarBtn" class="btn-confirm">
+        <i class="fas fa-plus"></i> Adicionar
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
